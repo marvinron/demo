@@ -1,0 +1,185 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes for Failed to commit area from 0x00000006c2200000 to 0x00000006d2000000 of length 266338304.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/os/windows/os_windows.cpp:3221), pid=61188, tid=54204
+#
+# JRE version:  (10.0.1+10) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (10.0.1+10, mixed mode, aot, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:50224,suspend=y,server=n -Dvisualvm.id=709448125274346 -javaagent:C:\Users\DELL\.IntelliJIdea2018.2\system\captureAgent\debugger-agent.jar=file:/C:/Users/DELL/AppData/Local/Temp/capture1.props -Dfile.encoding=UTF-8 com.example.demo.common.ClassPathDemo
+
+Host: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz, 8 cores, 15G,  Windows 10 , 64 bit Build 17134 (10.0.17134.1)
+Time: Thu Nov 08 13:56:27 2018 ?D1¨²¡À¨º¡Á?¨º¡À?? elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001f8d4a1c000):  JavaThread "Unknown thread" [_thread_in_vm, id=54204, stack(0x000000b49ff00000,0x000000b4a0000000)]
+
+Stack: [0x000000b49ff00000,0x000000b4a0000000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5a0369]
+V  [jvm.dll+0x6bcf81]
+V  [jvm.dll+0x6be176]
+V  [jvm.dll+0x6be803]
+V  [jvm.dll+0x234998]
+V  [jvm.dll+0x59dc74]
+V  [jvm.dll+0x592ab5]
+V  [jvm.dll+0x2f625b]
+V  [jvm.dll+0x2f61c5]
+V  [jvm.dll+0x2f60a2]
+V  [jvm.dll+0x2f8286]
+V  [jvm.dll+0x3440d3]
+V  [jvm.dll+0x3447e6]
+V  [jvm.dll+0x3441d3]
+V  [jvm.dll+0x2c43b8]
+V  [jvm.dll+0x2c5501]
+V  [jvm.dll+0x69d33b]
+V  [jvm.dll+0x69eb5c]
+V  [jvm.dll+0x351849]
+V  [jvm.dll+0x6859c2]
+V  [jvm.dll+0x3ba0a3]
+V  [jvm.dll+0x3bc201]
+C  [java.exe+0x3531]
+C  [java.exe+0xe1af]
+C  [java.exe+0xe356]
+C  [KERNEL32.DLL+0x13034]
+C  [ntdll.dll+0x71461]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001f8d256ea20, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001f8d4a37800 GCTaskThread "GC Thread#0" [stack: 0x000000b4a0000000,0x000000b4a0100000] [id=53220]
+  0x000001f8d4a3a000 GCTaskThread "GC Thread#1" [stack: 0x000000b4a0100000,0x000000b4a0200000] [id=60848]
+  0x000001f8d4a3c000 GCTaskThread "GC Thread#2" [stack: 0x000000b4a0200000,0x000000b4a0300000] [id=55316]
+  0x000001f8d4a3d800 GCTaskThread "GC Thread#3" [stack: 0x000000b4a0300000,0x000000b4a0400000] [id=60548]
+  0x000001f8d4a42000 GCTaskThread "GC Thread#4" [stack: 0x000000b4a0400000,0x000000b4a0500000] [id=61248]
+  0x000001f8d4a46000 GCTaskThread "GC Thread#5" [stack: 0x000000b4a0500000,0x000000b4a0600000] [id=60716]
+  0x000001f8d4a47000 GCTaskThread "GC Thread#6" [stack: 0x000000b4a0600000,0x000000b4a0700000] [id=60580]
+  0x000001f8d4a51000 GCTaskThread "GC Thread#7" [stack: 0x000000b4a0700000,0x000000b4a0800000] [id=49020]
+  0x000001f8d4a9d000 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000b4a0800000,0x000000b4a0900000] [id=30288]
+  0x000001f8d4a9e000 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000b4a0900000,0x000000b4a0a00000] [id=61212]
+  0x000001f8d4ab1000 ConcurrentGCThread "G1 Conc#1" [stack: 0x000000b4a0a00000,0x000000b4a0b00000] [id=46568]
+
+[error occurred during error reporting (printing all threads), id 0xe0000002]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001f8d4a1a260] Heap_lock - owner thread: 0x000001f8d4a1c000
+
+Heap address: 0x00000006c2200000, size: 4062 MB, Compressed Oops mode: Non-zero based: 0x00000006c2200000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff60be00000 - 0x00007ff60be3e000 	C:\Program Files\Java\jdk-10.0.1\bin\java.exe
+0x00007ffc7fea0000 - 0x00007ffc80081000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffc7ee00000 - 0x00007ffc7eeb2000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffc7ce90000 - 0x00007ffc7d103000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffc7f050000 - 0x00007ffc7f0f1000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffc7e920000 - 0x00007ffc7e9be000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffc7eb60000 - 0x00007ffc7ebbb000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffc7f550000 - 0x00007ffc7f674000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffc7e770000 - 0x00007ffc7e900000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffc7cc80000 - 0x00007ffc7cca0000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffc7eec0000 - 0x00007ffc7eee8000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffc7d110000 - 0x00007ffc7d2a2000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffc7cb90000 - 0x00007ffc7cc2f000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffc7ca90000 - 0x00007ffc7cb8a000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffc6fd70000 - 0x00007ffc6ffd9000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.345_none_fb429a5930656358\COMCTL32.dll
+0x00007ffc783a0000 - 0x00007ffc783aa000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffc7f680000 - 0x00007ffc7f9a3000 	C:\WINDOWS\System32\combase.dll
+0x00007ffc7d2b0000 - 0x00007ffc7d32a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffc7f1c0000 - 0x00007ffc7f1ed000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffc495d0000 - 0x00007ffc496bf000 	C:\Program Files\Java\jdk-10.0.1\bin\msvcr120.dll
+0x00007ffc49290000 - 0x00007ffc49336000 	C:\Program Files\Java\jdk-10.0.1\bin\msvcp120.dll
+0x0000000059280000 - 0x0000000059cf0000 	C:\Program Files\Java\jdk-10.0.1\bin\server\jvm.dll
+0x00007ffc7fe60000 - 0x00007ffc7fe68000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffc78c60000 - 0x00007ffc78c69000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffc750c0000 - 0x00007ffc750e3000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffc7f270000 - 0x00007ffc7f2dc000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffc75090000 - 0x00007ffc750ba000 	C:\WINDOWS\SYSTEM32\winmmbase.dll
+0x00007ffc7cc30000 - 0x00007ffc7cc79000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ffc78710000 - 0x00007ffc7871f000 	C:\Program Files\Java\jdk-10.0.1\bin\verify.dll
+0x00007ffc6e280000 - 0x00007ffc6e449000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffc6ed30000 - 0x00007ffc6ed59000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffc75e20000 - 0x00007ffc75e47000 	C:\Program Files\Java\jdk-10.0.1\bin\java.dll
+0x00007ffc6c160000 - 0x00007ffc6c196000 	C:\Program Files\Java\jdk-10.0.1\bin\jdwp.dll
+0x00007ffc6ca20000 - 0x00007ffc6ca4a000 	C:\Program Files\Java\jdk-10.0.1\bin\instrument.dll
+0x00007ffc76000000 - 0x00007ffc76016000 	C:\Program Files\Java\jdk-10.0.1\bin\zip.dll
+0x00007ffc761f0000 - 0x00007ffc761fa000 	C:\Program Files\Java\jdk-10.0.1\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-10.0.1\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.345_none_fb429a5930656358;C:\Program Files\Java\jdk-10.0.1\bin\server
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:50224,suspend=y,server=n -Dvisualvm.id=709448125274346 -javaagent:C:\Users\DELL\.IntelliJIdea2018.2\system\captureAgent\debugger-agent.jar=file:/C:/Users/DELL/AppData/Local/Temp/capture1.props -Dfile.encoding=UTF-8 
+java_command: com.example.demo.common.ClassPathDemo
+java_class_path (initial): E:\projects\demo\target\classes;D:\maven\localRepository\org\springframework\boot\spring-boot-starter-web\2.0.3.RELEASE\spring-boot-starter-web-2.0.3.RELEASE.jar;D:\maven\localRepository\org\springframework\boot\spring-boot-starter\2.0.3.RELEASE\spring-boot-starter-2.0.3.RELEASE.jar;D:\maven\localRepository\org\springframework\boot\spring-boot\2.0.3.RELEASE\spring-boot-2.0.3.RELEASE.jar;D:\maven\localRepository\org\springframework\boot\spring-boot-autoconfigure\2.0.3.RELEASE\spring-boot-autoconfigure-2.0.3.RELEASE.jar;D:\maven\localRepository\org\springframework\boot\spring-boot-starter-logging\2.0.3.RELEASE\spring-boot-starter-logging-2.0.3.RELEASE.jar;D:\maven\localRepository\org\apache\logging\log4j\log4j-to-slf4j\2.10.0\log4j-to-slf4j-2.10.0.jar;D:\maven\localRepository\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;D:\maven\localRepository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;D:\maven\localRepository\org\yaml\snakeyaml\1.19\snakeyaml-1.19.jar;D:\maven\localRepository\org\springframework\boot\spring-boot-starter-json\2.0.3.RELEASE\spring-boot-starter-json-2.0.3.RELEASE.jar;D:\maven\localRepository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.9.6\jackson-datatype-jdk8-2.9.6.jar;D:\maven\localRepository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.9.6\jackson-datatype-jsr310-2.9.6.jar;D:\maven\localRepository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.9.6\jackson-module-parameter-names-2.9.6.jar;D:\maven\localRepository\org\springframework\boot\spring-boot-starter-tomcat\2.0.3.RELEASE\spring-boot-starter-tomcat-2.0.3.RELEASE.jar;D:\maven\localRepository\org\apache\tomcat\embed\tomcat-embed-core\8.5.31\tomcat-embed-core-8.5.31.jar;D:\maven\localRepository\org\apache\tomcat\embed\tomcat-embed-el\8.5.31\tomcat-embed-el-8.5.31.jar;D:\maven\localRepository\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.31\tomcat-embed-websocket-8.5.31.jar;D:\maven\loca
+Launcher Type: SUN_STANDARD
+
+Logging:
+Log output configuration:
+#0: stdout all=warning uptime,level,tags
+#1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-10.0.1
+CLASSPATH=.;C:\Program Files\Java\jdk-10.0.1\lib;C:\Program Files\Java\jdk-10.0.1\lib\tools.jar
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\TortoiseSVN\bin;D:\apache-maven-3.3.3\apache-maven-3.3.3\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Git\cmd;C:\cygwin64\bin;C:\WINDOWS\System32\OpenSSH\;D:\adb;D:\scala\install\bin;D:\nodejs\;D:\MongoDB\bin;C:\Users\DELL\AppData\Local\Microsoft\WindowsApps;C:\Users\DELL\AppData\Roaming\npm;D:\Fiddler
+USERNAME=DELL
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 17134 (10.0.17134.1)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 158 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, physical 16637852k(4859948k free), swap 29641668k(68852k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (10.0.1+10) for windows-amd64 JRE (10.0.1+10), built on Mar 27 2018 02:27:48 by "mach5one" with MS VC++ 12.0 (VS2013)
+
+END.
